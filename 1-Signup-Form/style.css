@@ -36,6 +36,11 @@ html {
   text-align: center;
   color: #fff;
   z-index: 100;
+  transition: left .8s;
+}
+
+.container.change .banner {
+  left: 5rem;
 }
 
 .banner h1 {
@@ -55,6 +60,11 @@ html {
   height: 100%;
   background: linear-gradient(to right, #3ab19b, #4cbf91);
   z-index: 50;
+  transition: width 1.5s cubic-bezier(.19, 1, .22, 1);
+}
+
+.container.change .green-bg {
+  width: 40%;
 }
 
 .green-bg button {
@@ -84,6 +94,11 @@ html {
   align-items: center;
   justify-content: space-around;
   padding: 10rem 0;
+  transition: left 1.5s cubic-bezier(.19, 1, .22, 1);
+}
+
+.container.change .signup-form {
+  left: 40rem;
 }
 
 .signup-form h1 {
