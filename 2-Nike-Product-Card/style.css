@@ -24,6 +24,7 @@ html {
   display: grid;
   place-items: center;
   padding: 0 10rem;
+  overflow: hidden;
 }
 
 .card {
@@ -41,6 +42,7 @@ html {
   padding: 3rem;
   border-radius: 2.5rem 2.5rem 0 0;
   background-color: #f1ae04;
+  transition: background .5s;
 }
 
 .logo {
@@ -68,6 +70,15 @@ html {
   width: 30rem;
   top: -2.5rem;
   right: -10rem;
+  transition: transform 1s;
+}
+
+.shoe-2 {
+  position: absolute;
+  width: 33rem;
+  top: -10rem;
+  right: -45rem;
+  transition: transform 1s;
 }
 
 .card-bottom {
@@ -190,6 +201,7 @@ html {
   background-color: #1c477a;
   box-shadow: 0 1rem 2rem rgba(28, 71, 122, .5);
   color: #fff;
+  transition: background .5s;
 }
 
 .price span {
@@ -206,4 +218,19 @@ html {
   font-weight: bold;
 }
 
+/* ========== JS Animation ========== */
+.container.change .card-top {
+  background-color: #d35246;
+}
 
+.container.change .price {
+  background-color: #c02244;
+}
+
+.container.change .shoe-1 {
+  transform: translateX(-50rem) rotateZ(45deg);
+}
+
+.container.change .shoe-2 {
+  transform: translateX(-40rem) rotateZ(-45deg);
+}
