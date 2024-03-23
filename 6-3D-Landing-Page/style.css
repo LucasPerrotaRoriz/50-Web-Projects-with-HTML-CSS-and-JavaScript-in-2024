@@ -59,45 +59,71 @@ html {
   perspective: 150rem;
 }
 
+.active.box {
+  top: 0;
+  left: 0;
+  transition: all .5s;
+}
+
 .box {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform-style: preserve-3d;
   transform: rotateY(45deg) rotateX(30deg);
+}
+
+@keyframes boxAnim {
+  0% {
+    transform: rotateX(0) rotateY(0) rotateZ(0);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+  }
 }
 
 .box-1 {
   top: -6rem;
   left: -25rem;
+  animation: boxAnim 100s infinite linear;
 }
 
 .box-2 {
   top: -23rem;
   left: -11rem;
+  animation: boxAnim 100s -10s infinite linear;
 }
 
 .box-3 {
   top: -23rem;
   left: 10rem;
+  animation: boxAnim 100s -20s infinite linear;
 }
 
 .box-4 {
   top: -6rem;
   left: 25rem;
+  animation: boxAnim 100s -30s infinite linear;
 }
 
 .box-5 {
   top: 13rem;
   left: 22rem;
+  animation: boxAnim 100s -40s infinite linear;
 }
 
 .box-6 {
   top: 25rem;
   left: 0;
+  animation: boxAnim 100s -50s infinite linear;
 }
 
 .box-7 {
   top: 14rem;
   left: -21rem;
+  animation: boxAnim 100s -60s infinite linear;
 }
 
 .box div {
@@ -146,6 +172,12 @@ html {
   background-color: #e04e39;
 }
 
+.active.box div {
+  width: 16rem;
+  height: 16rem;
+  transition: all .2s .5s ease-in-out;
+}
+
 .top-side {
   transform: rotateX(90deg) translateZ(3.5rem);
 }
@@ -170,4 +202,30 @@ html {
 .left-side {
   transform-origin: left;
   transform: rotateY(90deg) translateX(-3.5rem);
+}
+
+.active .top-side {
+  transform: rotateX(90deg) translateZ(8rem);
+}
+
+.active .bottom-side {
+  transform: rotateX(90deg) translateZ(-8rem);
+}
+
+.active .front-side {
+  transform: translateZ(8rem);
+}
+
+.active .back-side {
+  transform: translateZ(-8rem);
+}
+
+.active .right-side {
+  transform-origin: right;
+  transform: rotateY(-90deg) translateX(8rem);
+}
+
+.active .left-side {
+  transform-origin: left;
+  transform: rotateY(90deg) translateX(-8rem);
 }
