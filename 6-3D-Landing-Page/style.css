@@ -38,7 +38,9 @@ html {
 
 .heading span {
   font-size: 4rem;
+  font-weight: 500;
   color: #efd81d; 
+  transition: color .2s;
 }
 
 .btn {
@@ -51,6 +53,8 @@ html {
   background-color: #efd81d;
   color: #fff;
   border: none;
+  transition: background-color .3s;
+  cursor: pointer;
 }
 
 .boxes {
@@ -72,6 +76,8 @@ html {
   justify-content: center;
   transform-style: preserve-3d;
   transform: rotateY(45deg) rotateX(30deg);
+  transition: all .5s;
+  cursor: pointer;
 }
 
 @keyframes boxAnim {
