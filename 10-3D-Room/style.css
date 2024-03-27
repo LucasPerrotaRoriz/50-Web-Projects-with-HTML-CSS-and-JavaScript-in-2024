@@ -11,12 +11,28 @@ html {
 .room {
   width: 100%;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  place-items: center;
   background-color: #000;
   perspective: 100rem;
   overflow: hidden;
+}
+
+.btn {
+  position: relative;
+  top: 10rem;
+  left: -40rem;
+  width: 15rem;
+  height: 15rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  line-height: 1.5;
+  letter-spacing: .2rem;
+  background-color: #eee;
+  color: rgb(252, 35, 7);
+  border: .3rem dashed rgb(252, 35, 7);
+  border-radius: 50% 50% 0 50%;
+  cursor: pointer;
 }
 
 .table {
@@ -32,7 +48,31 @@ html {
   border-radius: 50%;
   border-block-end: 2rem solid rgb(153, 253, 253);
   transform-style: preserve-3d;
-  transform: rotateX(70deg) translateZ(10rem);
+  transform: rotateX(80deg) translateZ(10rem);
+  transition: transform 2s 1s;
+}
+
+.table.change {
+  transform: rotateX(80deg) translateY(30rem) translateZ(10rem);
+  transition: transform 2s;
+}
+
+.letter {
+  width: 15rem;
+  height: 25rem;
+  font-family: 'Dancing Script';
+  font-size: 1.5rem;
+  text-indent: .5rem;
+  padding: 2rem 1rem;
+  background-color: #fff;
+  color: #555;
+  box-shadow: 0 0 0.1rem #aaa;
+  transform-origin: bottom;
+}
+
+.change .letter {
+  transform: rotateX(-80deg);
+  transition: transform 1s 2s;
 }
 
 .table-leg {
