@@ -16,3 +16,110 @@ html {
   background-color: #ddd;
 }
 
+.cards-wrapper {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: auto;
+}
+
+.card {
+  width: 30rem;
+  text-align: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
+    url("images/bg.jpg") center no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.8);
+  color: #fff;
+  transition: all .4s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 1.5rem 6rem rgba(0, 0, 0, 0.8);
+}
+
+.card-header h2 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  margin: 3rem;
+  padding: 1rem;
+  border-block-end: 1px groove #fff;
+  color: chocolate;
+}
+
+.card-header h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+.card-header sup {
+  font-size: 3.5rem;
+}
+
+.card-header span {
+  font-size: 1.8rem;
+}
+
+.card-body {
+  margin-block-end: 6rem;
+}
+
+.card-body li {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-block: 1.5rem;
+  list-style: none;
+}
+
+.card-body i {
+  margin-inline-end: 2.5rem;
+}
+
+.card-body .fa-check {
+  color: #0d683a;
+}
+
+.card-body .fa-times {
+  color: #911832;
+}
+
+.card-footer {
+  margin-block-end: 4rem;
+}
+
+.card-footer button {
+  width: 120px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 1rem;
+  background-color: chocolate;
+  border: 2px solid chocolate;
+  border-radius: 5rem;
+  color: #ddd;
+  outline: none;
+  cursor: pointer;
+}
+@media (max-width: 1200px) {
+  .container {
+    height: 100%;
+  }
+
+  .cards-wrapper {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    margin: 5rem;
+  }
+}
+
