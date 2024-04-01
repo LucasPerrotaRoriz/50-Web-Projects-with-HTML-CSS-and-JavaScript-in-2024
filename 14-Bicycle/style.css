@@ -9,3 +9,249 @@
 html {
   font-size: 62.5%;
 }
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bicycle {
+  width: 85rem;
+  height: 60rem;
+  position: relative;
+}
+
+.bicycle div {
+  position: absolute;
+}
+
+.wheel {
+  bottom: 0;
+  width: 30rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000;
+  background-clip: content-box;
+  border: 0.5rem dashed #000;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.wheel::after {
+  content: "";
+  position: absolute;
+  width: 24rem;
+  box-sizing: border-box;
+  border: 9.5rem solid #ddd;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.back-wheel {
+  right: 0;
+}
+
+.front-fork {
+  bottom: 15rem;
+  left: 16.5rem;
+  width: 3rem;
+  height: 17rem;
+  background-color: #000;
+  transform: rotateZ(20deg);
+  transform-origin: left bottom;
+}
+
+.front-fork::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0.5rem;
+  width: 2rem;
+  height: 5rem;
+  background-color: #000;
+  transform: rotateZ(30deg) translateX(-1rem);
+}
+
+.tube {
+  top: -12rem;
+  left: 0.5rem;
+  width: 2rem;
+  height: 12rem;
+  background-color: #000;
+}
+
+.tube::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: -0.5rem;
+  width: 3rem;
+  height: 3rem;
+  background-color: #000;
+}
+
+.handlebars {
+  top: 18rem;
+  left: 19rem;
+  width: 8rem;
+  height: 2rem;
+  background-color: #000;
+  transform: rotateZ(15deg);
+  perspective: 50rem;
+}
+
+.handlebars::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  width: 4rem;
+  background-color: #000;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.handlebars::after {
+  content: "";
+  position: absolute;
+  left: -15.5rem;
+  width: 30rem;
+  height: 2rem;
+  background-color: #000;
+  border-radius: 2rem;
+  transform: rotateY(-70deg);
+}
+
+.crossbar {
+  top: 22rem;
+  left: 26rem;
+  width: 27rem;
+  height: 3.5rem;
+  background-color: #000;
+  border-radius: 0 50% 50% 0;
+  transform: rotateZ(20deg);
+  transform-origin: left top;
+}
+
+.frame-1 {
+  width: 32rem;
+  height: 3.5rem;
+  top: 25rem;
+  left: 26rem;
+  background-color: #000;
+  transform: rotateZ(45deg);
+  transform-origin: left top;
+  border-radius: 0 50% 50% 0;
+}
+
+.frame-2 {
+  top: 44rem;
+  left: 45rem;
+  width: 25rem;
+  height: 2rem;
+  background-color: #000;
+  z-index: 10;
+}
+
+.seat-tube {
+  top: 30rem;
+  left: 47rem;
+  width: 3rem;
+  height: 18.5rem;
+  background-color: #000;
+  transform: rotateZ(15deg);
+}
+
+.seat-tube::before {
+  content: '';
+  position: absolute;
+  top: -11rem;
+  left: 0.5rem;
+  width: 2rem;
+  height: 11rem;
+  background-color: #000;
+}
+
+.seat-tube::after {
+  content: '';
+  position: absolute;
+  top: -3rem;
+  left: 0.25rem;
+  width: 2.5rem;
+  height: 1.5rem;
+  background-color: #000;
+}
+
+.seat {
+  top: -12rem;
+  left: -6rem;
+  width: 12rem;
+  height: 3rem;
+  background-color: #000;
+  border-radius: 20% 1rem 1rem 80%;
+  transform: rotateZ(-12deg);
+}
+
+.back-fork {
+  top: 26rem;
+  left: 60rem;
+  width: 2rem;
+  height: 25rem;
+  background-color: #000;
+  transform: rotateZ(-55deg);
+  z-index: 10;
+}
+
+.crank {
+  top: 40rem;
+  left: 40rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: #000;
+  background-clip: content-box;
+  border: .3rem dashed #000;
+  border-radius: 50%;
+}
+
+.pedals {
+  top: 37rem;
+  left: 44rem;
+  width: 1.5rem;
+  height: 17rem;
+  background-color: #000;
+  border-radius: .5rem;
+  transform: rotateZ(-12deg);
+}
+
+.pedals::before,
+.pedals::after {
+  content: '';
+  position: absolute;
+  left: -1.8rem;
+  width: 5rem;
+  height: 1.7rem;
+  background-color: #000;
+  border-radius: .3rem;
+}
+
+.pedals::before {
+  top: .2rem;
+}
+
+.pedals::after {
+  bottom: .2rem;
+}
+
+.chain {
+  top: 41rem;
+  left: 40.5rem;
+  width: 31.5rem;
+  height: 8.5rem;
+  border: .5rem solid #000;
+  border-radius: 5rem 50% 50% 5rem;
+  z-index: 10;
+}
