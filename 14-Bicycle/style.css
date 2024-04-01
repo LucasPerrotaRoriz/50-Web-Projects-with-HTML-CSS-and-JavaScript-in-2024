@@ -39,6 +39,7 @@ body {
   border: 0.5rem dashed #000;
   border-radius: 50%;
   aspect-ratio: 1;
+  animation: bicycleAnim 5s infinite linear;
 }
 
 .wheel::after {
@@ -215,6 +216,7 @@ body {
   background-clip: content-box;
   border: .3rem dashed #000;
   border-radius: 50%;
+  animation: bicycleAnim 10s infinite linear;
 }
 
 .pedals {
@@ -225,6 +227,7 @@ body {
   background-color: #000;
   border-radius: .5rem;
   transform: rotateZ(-12deg);
+  animation: bicycleAnim 10s infinite linear;
 }
 
 .pedals::before,
@@ -236,6 +239,7 @@ body {
   height: 1.7rem;
   background-color: #000;
   border-radius: .3rem;
+  animation: bicycleAnim 10s infinite linear reverse;
 }
 
 .pedals::before {
@@ -254,4 +258,14 @@ body {
   border: .5rem solid #000;
   border-radius: 5rem 50% 50% 5rem;
   z-index: 10;
+}
+
+@keyframes bicycleAnim {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
 }
