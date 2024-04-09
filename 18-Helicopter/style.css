@@ -31,6 +31,16 @@
     animation: bgAnim 10s infinite linear;
   }
   
+  @keyframes bgAnim {
+    0% {
+      background-position: 0 100%;
+    }
+  
+    100% {
+      background-position: 150rem 100%;
+    }
+  }
+  
   .helicopter {
     position: relative;
     width: 80rem;
@@ -53,7 +63,17 @@
     transform: rotateX(90deg);
     animation: bladeAnim .1s infinite linear;
   }
-
+  
+  @keyframes bladeAnim {
+    0% {
+      transform: rotateX(90deg) rotateZ(0);
+    }
+  
+    100% {
+      transform: rotateX(90deg) rotateZ(360deg);
+    }
+  }
+  
   .main-rotor {
     left: 17.5rem;
     width: 5rem;
@@ -161,4 +181,14 @@
     height: 9rem;
     background-color: #000;
     animation: tailRotorAnim .1s infinite linear;
+  }
+  
+  @keyframes tailRotorAnim {
+    0% {
+      transform: rotateX(0);
+    }
+  
+    100% {
+      transform: rotateX(360deg);
+    }
   }
