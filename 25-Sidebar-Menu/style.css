@@ -60,7 +60,7 @@ html {
   position: absolute;
   width: 3rem;
   height: 0.3rem;
-  margin-top: 1rem;
+  margin-block-start: 1rem;
   background-color: var(--secondary-color);
   transform-origin: left;
   transition: transform 0.3s, top 0.3s 0.3s, opacity 0.2s;
@@ -76,10 +76,6 @@ html {
 
 .line-3 {
   top: 2.4rem;
-}
-
-.card {
-  display: flex;
 }
 
 .change .line-1 {
@@ -101,6 +97,10 @@ html {
 .admin-image {
   width: 5rem;
   border-radius: 0.5rem;
+}
+
+.card {
+  display: flex;
 }
 
 .card-body {
@@ -325,3 +325,44 @@ html {
   letter-spacing: 1rem;
   color: #fff;
 }
+
+@media only screen and (max-width: 150rem) {
+  .sidebar {
+    left: -20vw;
+    width: 20vw;
+  }
+
+  .change .main-section {
+    left: 20vw;
+    width: 80vw;
+  }
+}
+
+@media only screen and (max-width: 120rem) {
+  .sidebar {
+    left: -25vw;
+    width: 25vw;
+  }
+
+  .change .main-section {
+    left: 25vw;
+    width: 75vw;
+  }
+}
+
+@media only screen and (max-width: 90rem) {
+  .sidebar {
+    left: -30vw;
+    width: 30vw;
+  }
+
+  .change .main-section {
+    left: 30vw;
+    width: 70vw;
+  }
+
+  .heading {
+    font-size: 7rem;
+  }
+}
+
